@@ -30,7 +30,7 @@
             <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-300">
                 <a href="#features" class="hover:text-amber-400 transition-colors">Funktionen</a>
                 <a href="#requirements" class="hover:text-amber-400 transition-colors">Systemanforderungen</a>
-                <a href="#download" class="bg-amber-500 hover:bg-amber-400 text-slate-900 px-4 py-2 rounded-xl font-semibold transition-all shadow-md shadow-amber-500/20 flex items-center gap-2">
+                <a href="https://github.com/knodel342/knoedel-pc-reiniger/releases/download/v1.0/PC.Cleaner.Pro.exe" class="bg-amber-500 hover:bg-amber-400 text-slate-900 px-4 py-2 rounded-xl font-semibold transition-all shadow-md shadow-amber-500/20 flex items-center gap-2">
                     <i class="fa-solid fa-download"></i> Download
                 </a>
             </nav>
@@ -57,31 +57,17 @@
                     Der <strong class="text-slate-200">Knödels PRO PC Reiniger v1.0</strong> knetet deinen Windows 11 Computer gründlich durch, befreit ihn von digitalem Klops-Müll und sorgt für butterweiche Performance.
                 </p>
 
-                <!-- 
-                  DOWNLOAD ANLEITUNG / WIE MAN EINE .EXE DATEI DOWNLOADBAR MACHT:
-                  
-                  Methode A (Aktuell implementiert mit JavaScript):
-                  Ein Klick triggert die Funktion `triggerDownload()`. Diese erzeugt dynamisch 
-                  einen Blob (Inhalt als virtuelle Datei) und erzwingt einen Download im Browser.
-                  
-                  Methode B (Direkte Verlinkung einer echten .EXE Datei auf dem Server):
-                  Wenn du eine echte .exe Datei auf deinem Webserver hast (z.B. im Ordner 'downloads/'), 
-                  kannst du den Button direkt als Link mit dem Attribut 'download' umbauen:
-                  
-                  <a href="downloads/KnoedelsPCReiniger_v1.0.exe" download="KnoedelsPCReiniger_v1.0.exe" ...>
-                      <span>... herunterladen</span>
-                  </a>
-                -->
+                <!-- Direkter Download-Link zu GitHub Releases -->
                 <div id="download" class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <button onclick="triggerDownload()" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-900 font-bold text-lg shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 group cursor-pointer">
+                    <a href="https://github.com/knodel342/knoedel-pc-reiniger/releases/download/v1.0/PC.Cleaner.Pro.exe" class="w-full sm:w-auto px-8 py-4 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-400 hover:to-orange-400 text-slate-900 font-bold text-lg shadow-xl shadow-amber-500/20 transform hover:-translate-y-0.5 transition-all flex items-center justify-center gap-3 group">
                         <i class="fa-solid fa-cloud-arrow-down text-2xl group-hover:bounce"></i>
-                        <span>KnoedelsPCReiniger_v1.0.exe herunterladen</span>
-                    </button>
+                        <span>PC.Cleaner.Pro.exe herunterladen</span>
+                    </a>
                 </div>
                 <div class="text-xs text-slate-500 mt-3 flex items-center justify-center gap-4">
                     <span><i class="fa-solid fa-shield-halved text-emerald-400 mr-1"></i> 100% virenfrei & lecker</span>
                     <span><i class="fa-solid fa-box-archive text-amber-400 mr-1"></i> Version 1.0</span>
-                    <span><i class="fa-solid fa-hard-drive text-blue-400 mr-1"></i> Nur 14.2 MB</span>
+                    <span><i class="fa-solid fa-hard-drive text-blue-400 mr-1"></i> Nur 29 MB</span>
                 </div>
             </div>
         </section>
@@ -94,7 +80,6 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Feature 1 -->
                     <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-all group">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors">
                             <i class="fa-solid fa-broom"></i>
@@ -103,7 +88,6 @@
                         <p class="text-slate-400 text-sm leading-relaxed">Keine Angst vor ungenutztem Cache! Knödels Kehrbesen wischt temporäre Dateien weg wie Semmelbrösel.</p>
                     </div>
 
-                    <!-- Feature 2 -->
                     <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-all group">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors">
                             <i class="fa-solid fa-gauge-high"></i>
@@ -112,7 +96,6 @@
                         <p class="text-slate-400 text-sm leading-relaxed">Bremst ballaststofflastige Autostart-Programme aus, damit dein Windows 11 sofort bereit zum Kochen ist.</p>
                     </div>
 
-                    <!-- Feature 3 -->
                     <div class="p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-amber-500/50 transition-all group">
                         <div class="w-14 h-14 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-2xl mb-6 group-hover:bg-amber-500 group-hover:text-slate-900 transition-colors">
                             <i class="fa-solid fa-shield-cat"></i>
@@ -165,73 +148,9 @@
         </section>
     </main>
 
-    <div id="downloadModal" class="fixed inset-0 bg-slate-950/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 hidden">
-        <div class="bg-slate-900 border border-slate-800 rounded-3xl max-w-md w-full p-6 text-center shadow-2xl relative animate-in fade-in zoom-in duration-200">
-            <div class="w-16 h-16 rounded-2xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-3xl mx-auto mb-4">
-                <i class="fa-solid fa-file-arrow-down"></i>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Download gestartet!</h3>
-            <p id="downloadStatusText" class="text-slate-400 text-sm mb-6">
-                <code class="bg-slate-800 text-amber-400 px-2 py-1 rounded text-xs font-mono">KnoedelsPCReiniger_v1.0.exe</code> wird vorbereitet...
-            </p>
-            
-            <!-- Progress Bar -->
-            <div class="w-full bg-slate-800 rounded-full h-3 mb-6 overflow-hidden">
-                <div id="progressBar" class="bg-gradient-to-r from-amber-500 to-orange-500 h-full w-0 transition-all duration-300"></div>
-            </div>
+    <footer class="py-8 text-center text-xs text-slate-500 border-t border-slate-800/60">
+        <p>&copy; 2026 Knödels PRO PC Reiniger. Alle Rechte vorbehalten.</p>
+    </footer>
 
-            <button onclick="closeModal()" id="closeModalBtn" class="w-full py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-sm transition-all hidden cursor-pointer">
-                Schließen
-            </button>
-        </div>
-    </div>
-
-    <script>
-        /*
-          Funktionsweise des Downloads:
-          Diese Funktion simuliert den Download-Fortschritt einer .exe Datei und generiert 
-          anschließend mittels JavaScript Blob eine reale Datei im Browser zum Herunterladen.
-        */
-        function triggerDownload() {
-            const modal = document.getElementById('downloadModal');
-            const progressBar = document.getElementById('progressBar');
-            const statusText = document.getElementById('downloadStatusText');
-            const closeBtn = document.getElementById('closeModalBtn');
-            
-            modal.classList.remove('hidden');
-            progressBar.style.width = '0%';
-            closeBtn.classList.add('hidden');
-            statusText.innerHTML = '<code class="bg-slate-800 text-amber-400 px-2 py-1 rounded text-xs font-mono">KnoedelsPCReiniger_v1.0.exe</code> wird heruntergeladen...';
-
-            let progress = 0;
-            const interval = setInterval(() => {
-                progress += Math.floor(Math.random() * 25) + 15;
-                if (progress >= 100) {
-                    progress = 100;
-                    clearInterval(interval);
-                    progressBar.style.width = '100%';
-                    statusText.innerHTML = '<span class="text-emerald-400 font-semibold"><i class="fa-solid fa-circle-check"></i> Download erfolgreich abgeschlossen!</span>';
-                    closeBtn.classList.remove('hidden');
-
-                    // Erstellt eine reale Datei im Browser-Speicher und startet den Download
-                    const blob = new Blob(['Binary Executable Stream for Knödels PRO PC Reiniger v1.0'], { type: 'application/x-msdownload' });
-                    const url = URL.createObjectURL(blob);
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = 'KnoedelsPCReiniger_v1.0.exe';
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
-                    URL.revokeObjectURL(url);
-                } else {
-                    progressBar.style.width = progress + '%';
-                }
-            }, 250);
-        }
-
-        function closeModal() {
-            document.getElementById('downloadModal').classList.add('hidden');
-        }
-    </script>
 </body>
 </html>
